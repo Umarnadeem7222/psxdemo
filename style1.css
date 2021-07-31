@@ -418,6 +418,8 @@ hr {
   .card2nd {
     margin: 0px;
     padding: 0px;
+  }.ii {
+    margin-left: 110px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -425,9 +427,7 @@ hr {
     margin: 0px;
     margin-bottom: 10px;
   }
-  .ii {
-    margin-left: 220px;
-  }
+  
 }
 .form-group {
   position: relative;
