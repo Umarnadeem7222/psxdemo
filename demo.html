@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="1/dist/hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        $(document).ready(function(){
+          $('.carousel').carousel().show();
+            $(".a").hide();
+            var count = 1;
+            $("#ham").click(function(){
+                $("#ham").toggleClass("is-active");
+                count++;
+                if(count%2 == 0){
+                    $(".a").fadeToggle();
+                    
+                }else{
+                    $(".a").fadeToggle();
+                }
+            })
+});
+    </script>
+    <script>
+      jQuery(document).ready(function ($) {
+
+$('#checkbox').change(function(){
+  setInterval(function () {
+      moveRight();
+  }, 3000);
+});
+
+var slideCount = $('#slider ul li').length;
+var slideWidth = $('#slider ul li').width();
+var slideHeight = $('#slider ul li').height();
+var sliderUlWidth = slideCount * slideWidth;
+
+$('#slider').css({ width: slideWidth, height: slideHeight });
+
+$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+  $('#slider ul li:last-child').prependTo('#slider ul');
+
+  function moveLeft() {
+      $('#slider ul').animate({
+          left: + slideWidth
+      }, 200, function () {
+          $('#slider ul li:last-child').prependTo('#slider ul');
+          $('#slider ul').css('left', '');
+      });
+  };
+
+  function moveRight() {
+      $('#slider ul').animate({
+          left: - slideWidth
+      }, 200, function () {
+          $('#slider ul li:first-child').appendTo('#slider ul');
+          $('#slider ul').css('left', '');
+      });
+  };
+
+  $('a.control_prev').click(function () {
+      moveLeft();
+  });
+
+  $('a.control_next').click(function () {
+      moveRight();
+  });
+
+});    
+
+    </script>
+    </head>
+
+<body>
+  <script>
+  AOS.init();
+</script>
+  <div class="head col-xs-12">
+    <img src="pic/AlviezLogo.jpg " alt="" width="130px" height="69px" style=" float: left;">
+    <div class="info col-xs-12">
+      <i style="float: left;" class="far fa-compass"></i><h3 class="address">Address</h3>
+      <h3 class="ph">Phone number</h3>
+    </div>
+  </div>
+  <hr>
+  <header style="float: left;z-index: 1;" >
+    <nav>
+        <button id="ham" class="hamburger hamburger--elastic" type="button" style="float: left;z-index: 100; position: fixed;"
+                aria-label="Menu" aria-controls="navigation" aria-expanded="true/false">
+          <span style="float: left; margin-left: 10px;" class="hamburger-box">
+            <span style="color: azure;" class="hamburger-inner"></span>
+          </span >
+          <h5 class="menu" style="float:left">MENU</h5>
+        </button>
+   
+    </nav>
+    <br>
+ 
+    <br>
+    <ul id="menu" class="a pt-2" style="float:left; z-index: 1; position: fixed;" >
+        <li  > 
+            <a  href="#">Home </a>
+          </li>
+          <li >
+            <a  href="#">Pricing </a>
+          </li>
+          <li >
+            <a  href="#">ACT-Acedewmy </a>
+          </li>
+          <li >
+            <a  href="#">About US </a>
+          </li>
+          <li >
+            <a  href="#">Contact US </a>
+          </li>
+          <li >
+            <a  href="#">Careers</a>
+          </li>
+          <li class="yy" >
+            <a  href="#">Trainings </a>
+          </li>
+      </ul>  
+      
+   </header>
+  
+ 
+
+<br>
+<br>
+<br>
+
+<div class="card4 col-md-3 col-xs-12">
+  <div data-aos="fade-right"
+  data-aos-delay="200"
+  data-aos-easing="ease-in-sine" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/pic/marga-santoso-OmPqCwX422Y-unsplash.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Premium Support for Traders</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+<div class="card1 col-md-3 col-xs-12">
+  <div data-aos="fade-right"
+  data-aos-delay="400"
+  data-aos-easing="ease-in-sine" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/pic/maxim-hopman-fiXLQXAhCfk-unsplash.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Portfolio management </h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+<div class="card2 col-md-3 col-xs-12">
+  <div data-aos="fade-right"
+  data-aos-delay="600"
+  data-aos-easing="ease-in-sine" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/pic/nick-chong-N__BnvQ_w18-unsplash.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Private Equity & Fund Management</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+<div class="card3 col-md-3 col-xs-12">
+  <div data-aos="fade-right"
+  data-aos-delay="800"
+  data-aos-easing="ease-in-sine" class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/pic/pexels-photo-6801651.jpeg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Investment Solution</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
+<section>
+
+  <h4 class="display-3 text-center mt-4"> ACT ACEDEMY</h4>
+  <hr width="40%" id="hr2">
+  <br>
+  <div data-aos="fade-right"  data-aos-duration="2000" class="container col-10 mt-2" style="height: auto; float: left; margin-left: 70px; background-color: #C3CEDA; border-radius: 15px;">
+    <div class="text" style="float: left;"><h3 style="float: left;" class="hh"  >Foundation</h3><br>
+    <p  style="float: left;">This will be the basic level or information about the market and how it works</p>
+  </div>
+  <img class="img-fluid" style="float: right;" src="/pic/analytics.png" alt="" height="100px" width="180px">
+  </div>    
+  <div data-aos="fade-left" data-aos-duration="2000" class="container col-10 mt-2" style="height: auto; float: right; margin-right: 70px;border-radius: 15px;">
+    <div class="text" style="float: left;"><h3 style="float: left;" class="hh"  >Intermediate</h3><br>
+      <p  style="float: left;">This will be the a bit more information about market concepts like Bull and Bear</p>
+    </div>
+    <img class="img-fluid" style="float: right;" src="/pic/reading.png" alt="" height="100px" width="180px">
+
+  </div>    
+  <div data-aos="fade-right" data-aos-duration="2000" class="container col-10  mt-2" style="height: auto; float: left; margin-left: 70px;background-color: #C3CEDA;border-radius: 15px;">
+    <div class="text" style="float: left;"><h3 style="float: left;" class="hh"  >Trader</h3><br>
+      <p  style="float: left;">After this you will be able to trade short term stocks by yourself and successfully</p>
+    </div>
+    <img class="img-fluid" style="float: right;" src="/pic/shoppingcartphone.png" alt="" height="100px" width="180px">
+
+  </div>    
+  <div data-aos="fade-left" data-aos-duration="2000" class="container col-10  mt-2" style="height: auto; float: right; margin-right: 70px;border-radius: 15px;">
+    <div class="text" style="float: left;"><h3 style="float: left;" class="hh"  >Master Trader</h3><br>
+      <p class="lead" style="float: left;">After this you will be able to trade short and long term stocks by yourself and successfully</p>
+    </div>
+    <img class="img-fluid" style="float: right;" src="/pic/shoppingcartphone.png" alt="" height="100px" width="180px">
+
+  </div>    
+  <div data-aos="fade-right" data-aos-duration="2000" class="container col-10  mt-2" style="height: auto; float: left; margin-left: 70px;background-color: #C3CEDA;border-radius: 15px;">
+    <div class="text" style="float: left;"><h3 style="float: left;" class="hh"  >Expert  Trader</h3><br>
+      <p  style="float: left;">After this you will be able to trade all stocks with analyzing Economic calender</p>
+    </div>
+    <img class="img-fluid" style="float: right;" src="/pic/shoppingcartphone.png" alt="" height="100px" width="180px">
+  </div>    
+  <div data-aos="fade-left" data-aos-duration="2000" class="container col-10  mt-2" style="height: auto; float: right; margin-right: 70px;border-radius: 15px;">
+    <h3 class="hh">One year mentorship</h3>
+
+  </div>    
+</section>
+
+<section>
+<div class="container">
+  <div class="display-3 text-center mt-4">ACT ACEDEMY layout 2</div>
+</div>
+<div class="container">
+  <div class="card2nd col-md-3 col-12">
+    <div class="img"><img src="/pic/reading.png" alt=""></div>
+  </div>
+  <div class="card2nd col-md-3 col-12">
+
+  </div>
+  <div class=" card2nd col-md-3 col-12">
+
+  </div>
+</div>
+<div class="container">
+  <div class="card2nd col-md-3 col-12">
+
+  </div>
+  <div class="card2nd col-md-3 col-12">
+
+  </div>
+  <div class=" card2nd col-md-3 col-12">
+
+  </div>
+</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
